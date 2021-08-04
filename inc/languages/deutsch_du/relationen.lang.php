@@ -3,6 +3,9 @@
 $l['relation_accepted'] = "{1} hat deine Relation akzeptiert. Sie befindet sich nun in deinem Profil.";
 $l['relation_refused'] = "{1} hat deine Relation abgelehnt. Bitte wende dich an {1} für mehr Informationen.";
 $l['relation_change'] = "{1} hat deine Relation in <b>{2}</b> in der Kategorie <b>{3}</b> geändert. Bitte kontrolliere, ob es für dich in Ordnung ist.";
+$l['myalerts_setting_relation_accepted'] = "Möchtest du eine Benachrichtung, wenn deine Relation angenommen wurde?";
+$l['myalerts_setting_relation_refused'] = "Möchtest du eine Benachrichtung, wenn deine Relation abgelehnt wurde?";
+$l['myalerts_setting_relation_change'] = "Möchtest du eine Benachrichtung, wenn deine Relation geändert wurde?";
 
 //Relationübersicht im User CP
 $l['relation_form'] = "Relationsformular ausklappen";
