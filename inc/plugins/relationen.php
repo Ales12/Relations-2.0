@@ -328,7 +328,9 @@ function relationen_install()
     <td class=\'trow1\'><strong>{$lang->relation_profile_rela}</strong></td><td class=\'trow1\'><strong>{$lang->relation_profile_shortfacts}</strong></td>
             </tr>
     <tr>    <td class=\'trow1\'><input type="text" name="art" id="art" placeholder="Mutter, Vater, beste Freunde, Feinde etc." class="textbox" style="width: 200px;"  /></td>
-    <td class=\'trow1\'><input type="text" name="shortfacts" id="shortfacts" placeholder="xx Jahre # Beruf/Haus # Blutstatus" class="textbox" style="width: 200px;" /></td>    </tr>
+    <td class=\'trow1\'><input type="text" name="age" id="age" placeholder="xx Jahre" class="textbox" style="width: 100px;" />
+		<input type="text" name="work" id="work" placeholder="Beruf/Schule" class="textbox" style="width: 100px;" />
+		<input type="text" name="relation" id="relation" placeholder="Beziehungsstatus (Single, Verlobt, in einer Beziehung etc.)" class="textbox" style="width: 100px;" /></td>    </tr>
                 <tr>    <td class=\'trow1\' ><strong>{$lang->relation_profile_wantedlink}</strong></td><td class=\'trow1\'><strong>Ein Gesuch vorhanden?</strong></td></tr>
         <td class=\'trow1\' align="center"><textarea class="textarea" name="description_wanted" id="description_wanted" rows="5" cols="15" style="width: 80%">Beschreibe hier kurz die Beziehung zwischen {$memprofile[\'username\']} und den NPC.</textarea></td>    <td class=\'trow1\' align="center"><input type="text" name="npc_wanted" id="npc_wanted" placeholder="https://" class="textbox" style="width: 80%;" /></td>        </tr>
 <tr>
@@ -447,7 +449,7 @@ function relationen_uninstall()
     }
 
     $db->delete_query('settings', "name IN ('relation_category')");
-    $db->delete_query('settinggroups', "name = 'relationen'");
+    $db->delete_query('settinggroups', "name = 'relation'");
 // Don't forget this
     $db->delete_query("templates", "title LIKE '%relationen%'");
     require_once MYBB_ADMIN_DIR."inc/functions_themes.php";
