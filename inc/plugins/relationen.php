@@ -719,8 +719,7 @@ function profile_relation(){
                 $user = build_profile_link($username, $row['uid']);
 
                 $chara = intval($row['uid']);
-                $ip_inplay_id = $mybb->settings['ip_inplay_id'];
-                $archiv_id = $mybb->settings['ip_archive_id'];
+    if (!empty($row['birthday'])) {
 
 //Geburtstage
                 $all_months = $mybb->settings['inplaykalender_months'];
@@ -760,7 +759,9 @@ function profile_relation(){
 
                 $interval = $ingame->diff($geburtstag);
                 $age = $interval->format("%Y Jahre");
-
+    }else{
+	    $ag = "";
+    }
                 //Shortfacts kannst du hier eingeben. Hierzu kannst du jegliche Profilfelder in der form $row['fidxx'] einfügen.
                 $shortfacts = $age." Jahre # ".$row['job']." # ".$row['fidxx'];
 
