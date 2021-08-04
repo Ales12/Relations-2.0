@@ -299,7 +299,7 @@ function relationen_install()
         'title' => 'relationen_formular',
         'template' => $db->escape_string('<table border="0" cellspacing="5" cellpadding="{$theme[\'tablespace\']}" class="tborder" style="width: 50%; margin:auto;">
     <form id="relationen" method="post" action="member.php?action=profile&uid={$memprofile[\'uid\']}">
-    <tr><td class=\'trow1\'><strong>{lang->relation_profile_relakind}</strong></td><td class=\'trow1\'><strong>{$lang->relation_profile_rela}</strong></td>
+    <tr><td class=\'trow1\'><strong>{$lang->relation_profile_relakind}</strong></td><td class=\'trow1\'><strong>{$lang->relation_profile_rela}</strong></td>
     </tr>
         <tr><td class=\'trow1\'><select name="kat">
 {$rela_select}
