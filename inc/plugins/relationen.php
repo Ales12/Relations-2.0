@@ -721,7 +721,7 @@ function profile_relation(){
                 $chara = intval($row['uid']);
    
                 //Shortfacts kannst du hier eingeben. Hierzu kannst du jegliche Profilfelder in der form $row['fidxx'] einfügen.
-                $shortfacts = $age." Jahre # ".$row['job']." # ".$row['fidxx'];
+                $shortfacts = "füge hier ein, was du brauchst";
 
                 if($mybb->user['uid'] != 0) {
                     if (!empty($row['avatar'])) {
