@@ -719,49 +719,7 @@ function profile_relation(){
                 $user = build_profile_link($username, $row['uid']);
 
                 $chara = intval($row['uid']);
-    if (!empty($row['birthday'])) {
-
-//Geburtstage
-                $all_months = $mybb->settings['inplaykalender_months'];
-                $year = $mybb->settings['inplaykalender_year'];
-                //wir wollen nur den letzten Monat
-
-                $month = strrpos($all_months, ',') + 1;
-                $month = substr($all_months, $month); //$last_word = PHP.
-
-                $monatsnamen = array(
-                    1 => "Januar",
-                    2 => "Februar",
-                    3 => "Maerz",
-                    4 => "April",
-                    5 => "Mai",
-                    6 => "Juni",
-                    7 => "Juli",
-                    8 => "August",
-                    9 => "September",
-                    10 => "Oktober",
-                    11 => "November",
-                    12 => "Dezember"
-                );
-                //wir wollen den Namen zu einer Zahl umwandeln
-                $month_int = array_search($month, $monatsnamen);
-
-                //Jetzt wollen wir eine Variable im Datumsformat
-                $ingame = new DateTime("01-" . $month_int . "-" . $year);
-
-                //Geburtstag des Users bekommen
-                $gebu = $db->query("SELECT birthday FROM ".TABLE_PREFIX."users WHERE uid =$chara");
-                while ($data = $db->fetch_array($gebu)) {
-                    //datumsformat:
-                    $geburtstag = new DateTime($data['birthday']);
-                }
-
-
-                $interval = $ingame->diff($geburtstag);
-                $age = $interval->format("%Y Jahre");
-    }else{
-	    $ag = "";
-    }
+   
                 //Shortfacts kannst du hier eingeben. Hierzu kannst du jegliche Profilfelder in der form $row['fidxx'] einfügen.
                 $shortfacts = $age." Jahre # ".$row['job']." # ".$row['fidxx'];
 
